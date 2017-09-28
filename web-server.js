@@ -1,5 +1,12 @@
 require('http').createServer((req, res)=> {
-    res.writeHead(200, {'Content-type': 'text/html'})
+    res.writeHead(200, {'Content-Type': 'text/html'})
+    res.write('hello')
 
-    res.end('<h1>hello world</h1>');
+    setTimeout(() => {
+        res.end('<b>world</b>')
+    }, 500)
+
+    console.log(req)
+    console.log(res)
+    // res.end('<strong>hello world</strong>');
 }).listen(3000)

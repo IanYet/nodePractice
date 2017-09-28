@@ -4,6 +4,8 @@ let count = 0, users = {}
 
 const server = net.createServer((conn) => {
 
+    console.log(conn)
+    
     conn.setEncoding('utf8')
     conn.write(
         `\n> welcome to node-chat! \n> ${count} other poeple are connected at this time. \n> please write your name and press enter: `
