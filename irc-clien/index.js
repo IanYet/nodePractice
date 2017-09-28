@@ -5,7 +5,7 @@ const client = net.connect(3000, 'localhost')
 
 client.setEncoding('utf-8')
 
-client.on('connect', () => console.log('connected!!'))
+client.on('connect', () => console.log('connected'))
 
 client.on('data', (data) => {
     stdout.write(data)
