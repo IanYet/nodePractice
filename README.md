@@ -1,3 +1,3 @@
 # nodePractice
 ---
-###just run **node filename.js**
+### just run **node filename.js**
