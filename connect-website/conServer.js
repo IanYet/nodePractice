@@ -1,10 +1,4 @@
-const connect = require('connect')
-const static = require('connect-static')
+const static = require('st')
+const http = require('http')
 
-const app = connect()
-const option = {}
-
-static(option, function(err, middleware) {
-    // if (err) throw err;
-    app.use('/', middleware);
-  });
+http.createServer(static(__dirname)).listen(3000)

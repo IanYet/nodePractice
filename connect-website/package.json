@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "connect": "^3.6.5",
-    "connect-static": "^1.5.2"
+    "st": "^1.2.2"
   }
 }
