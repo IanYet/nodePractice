@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
 
         fs.stat(__dirname + req.url, (err, stats) => {
 
-            if(err || !fs.stats.isFile()){
+            if(err || !stats.isFile()){
                 res.writeHead('404')
                 res.end('404')
             }
@@ -24,6 +24,7 @@ const server = http.createServer((req, res) => {
 
     function serve(path, type) {
         res.writeHead(200, {'Content-Type': type})
+        fs.createReadStream(path).pipe(res)
     }
 })
 
