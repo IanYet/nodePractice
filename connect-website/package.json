@@ -9,6 +9,7 @@
   "author": "Ian",
   "license": "ISC",
   "dependencies": {
-    "connect": "^3.6.5"
+    "connect": "^3.6.5",
+    "connect-static": "^1.5.2"
   }
 }
