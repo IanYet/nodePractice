@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express()
 
-app.get('/', (req, res) => {
-    res.send('hello world')
-})
+// app.get('/', (req, res) => {
+//     res.send('hello world')
+// })
+
+app.use(express.static('public'))
 
 const server = app.listen(3000, () => {
     let host = server.address().address
