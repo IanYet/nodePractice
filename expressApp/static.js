@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 
-app.use(express.static('node_modules'))
+//url leaf path must be a file instead of folder
+app.use(express.static('public'))
 
 const server = app.listen(3000, () => {})
