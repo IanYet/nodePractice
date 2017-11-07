@@ -9,7 +9,7 @@ app.post('/', (req, res) => {
     res.send('POST')
 })
 
-// strang next()
+// strange next()
 app.all('/secret', (req, res, next) => {
     console.log('secret')
     next()
@@ -21,4 +21,4 @@ app.all('/secret', (req, res, next) => {
 //     console.log('next')
 // }
 
-app.listen('3000', () => console.log('connct'))
+app.listen('3001', () => console.log('connct'))
