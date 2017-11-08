@@ -7,10 +7,10 @@ app.use((res, req, next) => {
 })
 
 app.use('/user', (res, req, next) => {
-    console.log(`request url: ${req.originalUrl}`)
+    console.log('request url:' + req.originalUrl)
     next()
 }, (res, req, next) => {
-    console.log(`request type: ${req.method}`)
+    console.log('request type:' + req.method)
     next()
 })
 
