@@ -1,15 +1,22 @@
 const express = require('express')
 const app = express()
 
-const myLogger = function (req, res, next) {
+const myLogger = (req, res, next) => {
   console.log('LOGGED')
   next()
 }
 
-app.use(myLogger)
+const requestTime = (req, res, next) => {
+  req.requestTime = Date.now()
+  next()
+}
+
+app.use(requestTime)
 
 app.get('/', function (req, res) {
-  res.send('Hello World!')
+  let responseText = 'Hello World!<br>'
+  responseText += '<small>Requested at: ' + req.requestTime + '</small>'
+  res.send(responseText)
 })
 
 app.listen(3000)
