@@ -12,13 +12,15 @@ app.set('view engine', 'pug')
 app.set('views', './views')
 
 app.get('/', (req, res) => {
-    app.render('index', {authenticated: false})
+    res.render('index', {authenticated: false})
 })
 
 app.get('/login', (req, res) => {
-    app.render('login')
+    res.render('login')
 })
 
 app.get('/signup', (req, res) => {
-    app.render('signup')
+    res.render('signup')
 })
+
+app.listen(3000)

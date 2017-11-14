@@ -1,2 +1,11 @@
-extends layout
-block body
+extends layout.pug
+
+block bod
+  if (authenticated)
+    p welcome back, ${me.first}
+    a(href = "/logout") Logout
+  else
+    p welcome new visitors!
+    ul
+      li: a(href = "/login") Login
+      li: a(href = "/signup") Signup
